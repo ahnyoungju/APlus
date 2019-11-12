@@ -4,7 +4,6 @@
 
 shopping_list = []
 
-
 def show_help():
     # print instructions to use menu on app
 
@@ -26,7 +25,6 @@ def show_help():
     print(
         "Enter item you need and press enter. Repeat for every new item to add. When finished, make a selection from the above menu")
 
-
 def show_list():
     # print current list of items
 
@@ -35,13 +33,11 @@ def show_list():
     for item in shopping_list:
         print(item)
 
-
 def add_item_to_list(new_item):
     # add new item to shopping list
 
     shopping_list.append(new_item)
     print("{} has been added. Your Shopping List now has {} items.".format(new_item, len(shopping_list)))
-
 
 show_help()
 while True:
@@ -53,6 +49,8 @@ while True:
     if new_item == "1":
         show_list()
         break
+
+    # user will be asked for item to delete
     elif new_item == "2":
         delete_item = input("Which item would you like to remove?\n")
         shopping_list.remove(delete_item)
