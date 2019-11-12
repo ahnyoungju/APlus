@@ -45,3 +45,7 @@ def decodeFile(inputF):
     with open(inputF, 'wb') as f:
         f.write(decoded)
     f.close()
+
+def decode(data):
+    decode = base64.b64decode(data)
+    return decode

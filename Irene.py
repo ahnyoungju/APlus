@@ -1,12 +1,12 @@
 # import requests
 import json
 import common
+#import base64
 
 class ioT:
     def __init__(self, name = "ioT Device"):
         f = open("TodayWeather.json", "r")
-        todayWeather = f.read()
-        #todayWeather = common.decode(todayWeather)
+        todayWeather = common.decode(f.read())
         self.weather = json.loads(todayWeather)
      #   self.weather['Sunset'] = datetime.fromtimestamp(self.weather['Sunset'])
         f.close()
