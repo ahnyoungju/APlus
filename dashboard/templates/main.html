@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ioT">
+    Today's Weather : {{ ioT.weather.Description }}
+    <IMG class="weatherimg" src={{ ioT.weather.Icon }}>
+    <div class="comments">
+        Temperature : {{ ioT.weather.Temp_min }} to {{ ioT.weather.Temp_max }} <br>
+        Wind Speed : {{ ioT.weather.Wind_speed }} <br>
+    </div>
+</div>
+
+<div class="ioT">
+    Today's News
+    <div class="news">
+    {% for news in ioT.News %}
+        <!-- <font color="grey">({{ news.pubDate }})</font> -->
+        <li><a href={{ news.links }} target="_blank"> {{ news.title }}</a></li>
+    {% endfor %}
+    </div>
+</div>
+
+<div class="ioT">
+    {% if ioT.umbrella %}
+    Please bring Umbrella Today
+    {% else %}
+    You don't need to bring Umbrella
+    {% endif %}
+
+    <div class="comments">
+        If the humidity is more than 50%, It's better to bring Umbrella <br>
+    Current humidity level : {{ ioT.weather.Humidity }}
+    </div>
+</div>
+
+<div class="ioT">
+    {% if ioT.gardenwater %}
+    No garden watering Today
+    {% else %}
+    Watering Garden Today
+    {% endif %}
+    <div class="comments">
+        If the humidity is more than 70%, Garden watering doesn't need <br>
+    Current humidity level : {{ ioT.weather.Humidity }}
+    </div>
+</div>
+
+<div class="ioT">
+    Blind & Curtain <br>
+    Opening time : {{ ioT.weather.Str_sunrise }}<br>
+    Closing time : {{ ioT.weather.Str_sunset }}
+</div>
+
+{% endblock %}

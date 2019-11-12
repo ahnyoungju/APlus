@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+    <head>
+        <title>PythonA+</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <!link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+    <body>
+    <div class="page-header">
+        <h1><a href="/">PythonA+ Home Automation Dashboard</a></h1>
+    </div>
+
+<div class="content-mid-header">
+    Home / Dashboard
+</div>
+     <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div align="center">Holmesglen Cyber Security Certificate VI, Group: PythonA+, Member: Irene, Kumi, Tahir, Youngju, Walida</div>
+    </footer>
+
+    </body>
+</html>
