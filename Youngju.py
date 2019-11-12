@@ -62,12 +62,12 @@ fout.close()
 
 common.encodeFile("TodayWeather.json")
 
-common.decodeFile("TodayWeather.json")
+#common.decodeFile("TodayWeather.json")
 
-with open("TodayWeather.json", "r") as fin:
-    data = fin.read()
-print(data)
-print(type(data))
-t = json.loads(data)
-common.jprint(t)
-fin.close()
+#with open("TodayWeather.json", "r") as fin:
+#    data = fin.read()
+#print(data)
+#print(type(data))
+#t = json.loads(data)
+#common.jprint(t)
+#fin.close()
