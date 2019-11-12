@@ -12,7 +12,7 @@ d_client = urlopen(news_url)                      #urllib is a python module tha
 xml_page = d_client.read()                          #read method read the opened url page and stores in the variable
 d_client.close()                                      #after the file, client closed the connection with clinet() method
 
-soup_page = soup(xml_page, "xml")               #Beautiful 'Soup' is a library used for scrapping web pages.
+soup_page = soup(xml_page, "html.parser")               #Beautiful 'Soup' is a library used for scrapping web pages.
                                                 # It sits atop an HTML or XML parser, providing Pythonic idioms
                                                 #for iterating, searching, and modifying the parse tree.
 
@@ -24,15 +24,15 @@ extracted_records = []                          #want to prepend that informatio
                                                 #with a for loop which will find titles,links and publication date.
 
 for news in news_list:                          #for loop which will iterate over news_list for title, links and pubDate
-                                                #and store the information in the variable news.
-    title = news.title
-    links = news.links
-    pubDate = news.pubDate
+                                                # #and store the information in the variable news.
+    #title = news.title
+    #links = news.links
+    #pubDate = news.pubdate
 
     records = {
         'title'     :news.title.text,
         'links'     :news.link.text,
-        'pubDate'   : news.pubDate.text,
+        'pubDate'   :news.pubdate.text,
          }
 
     extracted_records.append(records)           #lets append all the clean data in dictionary as items
