@@ -16,6 +16,7 @@ def show_help():
   2. DELETE : to delete item and print shopping list
   3. SHOW : to print list of current items
   4. HELP : to bring up menu  
+  Q. Quit : 
 
   -----------------------------------------------------------
   """)
@@ -62,5 +63,9 @@ while True:
     elif new_item == "4":
         show_help()
         continue
+    elif new_item == "Q":
+        show_list()
+        print("Now, You can go to the grocery !!!")
+        break
 
     add_item_to_list(new_item)
