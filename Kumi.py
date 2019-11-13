@@ -66,6 +66,10 @@ while True:
     elif new_item == "Q":
         show_list()
         print("Now, You can go to the grocery !!!")
+
+        with open("ShoppingList.json", "w") as fout:
+           fout.write(str(shopping_list))
+
         break
 
     add_item_to_list(new_item)
