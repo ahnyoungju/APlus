@@ -1,4 +1,5 @@
 import re
+import webbrowser
 
 def display_menu():
     print("############################################")
@@ -41,6 +42,6 @@ elif answer == 2:
 elif answer == 3:
     import Kumi
 elif answer == 4:
-    print("Call")
+    webbrowser.open_new("https://google.com")
 else:
     exit(0)

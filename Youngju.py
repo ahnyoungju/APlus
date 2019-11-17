@@ -50,7 +50,7 @@ todayWeather["Str_sunset"] = str(datetime.fromtimestamp(todayWeather["Sunset"]))
 todayWeather["Icon"] = "http://openweathermap.org/img/wn/" + todayWeather["Icon"] + ".png"
 
 #print( todayWeather )
-common.jprint( todayWeather )
+#common.jprint( todayWeather )
 
 # Write json to TodayWeather.json file
 fout = open("TodayWeather.json", "w")
@@ -62,12 +62,11 @@ fout.close()
 
 common.encodeFile("TodayWeather.json")
 
-#common.decodeFile("TodayWeather.json")
-
-#with open("TodayWeather.json", "r") as fin:
-#    data = fin.read()
-#print(data)
-#print(type(data))
-#t = json.loads(data)
-#common.jprint(t)
-#fin.close()
+# Print
+print( location , " Weather")
+print( "#######################################################")
+print( "Today sunrise is at ", todayWeather["Str_sunrise"] )
+print( "Today sunset is at ", todayWeather["Str_sunset"] )
+print( "Weather is ", todayWeather["Description"])
+print( "Temperature is between ", todayWeather["Temp_min"], " and ", todayWeather["Temp_max"])
+print( "#######################################################")
