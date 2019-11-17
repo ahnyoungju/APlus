@@ -5,8 +5,6 @@ import json
 import base64
 
 # ===================================================
-# jprint
-#
 # Create a formatted string of the Python JSON object
 # ===================================================
 def jprint(obj):
@@ -23,12 +21,9 @@ def encodeFile(inputF):
     f.close()
 
     encoded = base64.b64encode(bytes(data))
-    print(data)
-    print(encoded)
 
     with open(inputF, 'wb') as f:
         f.write(encoded)
-    f.close()
 
 # ===================================================
 # Decrypt File
@@ -36,16 +31,15 @@ def encodeFile(inputF):
 def decodeFile(inputF):
     with open(inputF, "rb") as f:
         data = f.read()
-    f.close()
 
     decoded = base64.b64decode(bytes(data))
-    print(data)
-    print(decoded)
 
     with open(inputF, 'wb') as f:
         f.write(decoded)
-    f.close()
 
+# ===================================================
+# Decrypt Data
+# ===================================================
 def decode(data):
     decode = base64.b64decode(data)
     return decode
