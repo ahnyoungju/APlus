@@ -45,6 +45,6 @@ while( login ) :
     elif answer == 3:
         import Kumi
     elif answer == 4:
-        webbrowser.open_new("https://google.com")
+        webbrowser.open_new("http://pythonaplus.pythonanywhere.com/")
     else:
         exit(0)
