@@ -16,18 +16,21 @@
     margin-bottom: 0;
     color: #454545;
     font-size: 9pt;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
 }
 
 .content-mid-header {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     margin-top: 0;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
 }
 
 .weatherimg {
   box-shadow: 3px 0px 3px 0px rgba(0, 0, 50, 0.97);
+  align: right;
   background-color: #ABABAB;
+  width: 100px;
+  height: 100px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -42,14 +45,12 @@
     margin-left: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     padding: 20px;
 
-  -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
-  -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
-  box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
-  float: left;
-  width: 100%;
+  -webkit-box-shadow: 3px 0px 3px 0px rgba(0, 0, 50, 0.97);
+  -moz-box-shadow: 3px 0px 3px 0px rgba(0, 0, 50, 0.97);
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 50, 0.97);
 }
 
 .news {
@@ -62,4 +63,27 @@
     font-size: 9pt;
     margin-top: 15;
     font-style: italic;
+}
+
+div {
+    display: block;
+}
+
+.column_left {
+    float: left;
+    width: 600px;
+}
+
+.column_right {
+    position: relative;
+    float: right;
+    width: 300px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 8px 10px 0;
+    width: 900px;
+    text-align: left;
+    zoom: 1;
 }
