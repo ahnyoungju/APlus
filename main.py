@@ -1,5 +1,6 @@
 import re
 import webbrowser
+import Youngju
 
 def display_menu():
     print("############################################")
@@ -33,15 +34,17 @@ def get_choice() :
 # Main Procedure
 login = True
 
-answer = get_choice()
-
-if answer == 1:
-    import Tahir
-elif answer == 2:
-    import Youngju
-elif answer == 3:
-    import Kumi
-elif answer == 4:
-    webbrowser.open_new("https://google.com")
-else:
-    exit(0)
+while( login ) :
+    answer = get_choice()
+    if answer == 1:
+        import Tahir
+    elif answer == 2:
+        if Youngju.Youngju() == False :
+            print("At the moment, you can't get weather information.")
+            exit(-1)
+    elif answer == 3:
+        import Kumi
+    elif answer == 4:
+        webbrowser.open_new("https://google.com")
+    else:
+        exit(0)
