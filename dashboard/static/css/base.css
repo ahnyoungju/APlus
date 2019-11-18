@@ -30,8 +30,8 @@ body {
 }
 
 .weatherimg {
-  box-shadow: 3px 0px 3px 0px rgba(0, 0, 50, 0.97);
-  background-color: #ABABAB;
+  -box-shadow: 3px 0px 3px 0px rgba(0, 0, 50, 0.97);
+  background-color: #dedede;
   width: 80px;
   height: 80px;
 }
