@@ -18,4 +18,11 @@ def dashboard(request):
     #print(newsdata)
     devices["News"] = newsdata
 
+    #Read Shopping List
+    f = open("ShoppingList.json", "r")
+    slist = eval(f.read())
+    f.close()
+    #print(newsdata)
+    devices["ShoppingList"] = slist
+
     return render(request,'main.html', {'ioT': devices})
