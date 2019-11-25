@@ -1,8 +1,8 @@
 # provide menu for (1) adding items and print ADD (2) deleting items and print DELETE (3) print list SHOW (4) assistance HELP (5) exit QUIT commands
-
 # provide list of all items
 
 shopping_list = []
+
 
 def show_help():
     # print instructions to use menu on app
@@ -25,6 +25,7 @@ def show_help():
     print("Hello " + user + "!")
     print("Type each item you need and press enter. When done, make a selection from the above menu from 1 to 5.")
 
+
 def show_list():
     # print current list of items
 
@@ -32,6 +33,7 @@ def show_list():
 
     for item in shopping_list:
         print(item)
+
 
 def add_item_to_list(new_item):
     # add new item to list
@@ -69,9 +71,11 @@ while True:
         show_list()
         print("Let’s hit the road! You are ready to go shopping!")
 
+        # save shopping list to json file
         with open("ShoppingList.json", "w") as fout:
            fout.write(str(shopping_list))
 
         break
+
 
     add_item_to_list(new_item)
