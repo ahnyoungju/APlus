@@ -12,7 +12,7 @@ d_client = urlopen(news_url)                      #urllib is a python module tha
 xml_page = d_client.read()                          #read method read the opened url page and stores in the variable
 d_client.close()                                      #after the file, client closed the connection with clinet() method
 
-soup_page = soup(xml_page, "html.parser")               #Beautiful 'Soup' is a library used for scrapping web pages.
+soup_page = soup(xml_page, "xml")               #Beautiful 'Soup' is a library used for scrapping web pages.
                                                 # It sits atop an HTML or XML parser, providing Pythonic idioms
                                                 #for iterating, searching, and modifying the parse tree.
 

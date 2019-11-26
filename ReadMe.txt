@@ -28,3 +28,7 @@ http://127.0.0.1:8000/
 
 - make web application named dashboard
 (myvenv) ~/APlus$ python manage.py startapp dashboard
+
+- Use Github, pull source code
+git clone https://github.com/ahnyouhgju/APlus.git
+git pull
