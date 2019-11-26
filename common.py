@@ -15,10 +15,8 @@ def jprint(obj):
 # Encrypt File
 # ===================================================
 def encodeFile(inputF):
-
     with open(inputF, "rb") as f:
         data = f.read()
-    f.close()
 
     encoded = base64.b64encode(bytes(data))
 
@@ -36,6 +34,13 @@ def decodeFile(inputF):
 
     with open(inputF, 'wb') as f:
         f.write(decoded)
+
+# ===================================================
+# Encrypt File
+# ===================================================
+def encode(data):
+    encoded = base64.b64encode(data)
+    return encoded
 
 # ===================================================
 # Decrypt Data
