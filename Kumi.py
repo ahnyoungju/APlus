@@ -1,5 +1,4 @@
 # provide menu for (1) adding items and print ADD (2) deleting items and print DELETE (3) print list SHOW (4) assistance HELP (5) exit QUIT commands
-
 # provide list of all items
 
 shopping_list = []
@@ -39,7 +38,6 @@ def add_item_to_list(new_item):
     shopping_list.append(new_item)
     print("{} has been added. Your Shopping List now has {} items.".format(new_item, len(shopping_list)))
 
-#------------ start ---------------
 show_help()
 while True:
 
@@ -49,34 +47,38 @@ while True:
     # user have option to quit app
     if new_item == "1":
         show_list()
-        #print("Let’s hit the road! You are ready to go shopping!")
-        #break
+        break
+
     # user will be asked for item to delete
     elif new_item == "2":
         delete_item = input("Which item would you like to remove?\n")
         if delete_item in shopping_list:
             shopping_list.remove(delete_item)
         else:
-            print("This is not in the list.")
-
+            print("Sorry this is not in your list.")
         show_list()
-        continue
-        #print("Let’s hit the road! You are ready to go shopping!")
-        #break
+        break
+
     elif new_item == "3":
         show_list()
-        #print("Let’s hit the road! You are ready to go shopping!")
-        #break
-        continue
+        break
+
     elif new_item == "4":
         show_help()
         continue
+
     elif new_item == "5":
         show_list()
+
         with open("ShoppingList.json", "w") as fout:
            fout.write(str(shopping_list))
 
         print("Let’s hit the road! You are ready to go shopping!")
         break
 
+    #elif new_item > "5":
+        #print("Sorry wrong selection. Please try again with a selection from 1 to 5.")
+        #break
+
     add_item_to_list(new_item)
+
