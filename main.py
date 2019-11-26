@@ -13,19 +13,23 @@ def display_menu():
     print(" 5. Exit")
 
 def error_check(ans):
-    x = re.match(r"[12345]", ans)
+    # Regular expression.
+    # if ans is 1,2,3,4, or 5, then
+    #     re.match returns the character,
+    # else re.match returns None
+    x = re.match(r"^[12345]$", ans)
 
-    if x != None :
+    if x != None:
         return True
     else:
         print("You entered invalid number. ", ans)
         return False
 
-def get_choice() :
+def get_choice():
     display_menu()
     ans = input("Enter a number : ")
 
-    while( error_check(ans) == False ) :
+    while (error_check(ans) == False):
         display_menu()
         ans = input("Enter a number again: ")
 
@@ -34,17 +38,17 @@ def get_choice() :
 # Main Procedure
 login = True
 
-while( login ) :
+while (login):
     answer = get_choice()
     if answer == 1:
         import Tahir
     elif answer == 2:
-        if Youngju.Youngju() == False :
+        if Youngju.Youngju() == False:
             print("At the moment, you can't get weather information.")
             exit(-1)
     elif answer == 3:
         import Kumi
     elif answer == 4:
         webbrowser.open_new("http://pythonaplus.pythonanywhere.com/")
-    else:
+    else:   # answer == 5
         exit(0)
