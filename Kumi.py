@@ -76,9 +76,5 @@ while True:
         print("Let’s hit the road! You are ready to go shopping!")
         break
 
-    #elif new_item > "5":
-        #print("Sorry wrong selection. Please try again with a selection from 1 to 5.")
-        #break
-
     add_item_to_list(new_item)
 
